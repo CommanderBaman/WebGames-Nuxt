@@ -1,0 +1,46 @@
+.wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh auto;
+}
+
+li {
+  padding: 1em;
+}
+
+li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  min-height: 0.1em;
+  margin: 0.1em auto 0;
+  background-color: var(--border-primary);
+  transition: width 0.2s ease-in-out;
+}
+
+li a:hover::after,
+li a:focus::after {
+  width: 100%;
+}
+
+@media only screen and (min-width: 48em) {
+  .wrapper {
+    position: relative;
+  }
+
+  ul {
+    margin: 2vh auto;
+    padding: 0 3vw;
+    justify-content: right;
+  }
+  li {
+    padding: 1em 1.5em;
+  }
+}

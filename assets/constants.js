@@ -16,4 +16,9 @@ export const routes = [
     name: 'TicTacToe',
     id: 2,
   },
+  {
+    path: '/blackjack',
+    name: 'Black Jack',
+    id: 3,
+  },
 ]

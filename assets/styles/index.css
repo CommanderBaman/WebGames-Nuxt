@@ -4,24 +4,79 @@
 
 /* color variables */
 :root {
+  /* colors */
   --bg-primary: #111;
   --font-primary: #fff;
+  --border-primary: #fff;
 
+  /* fonts */
   --para-font: 'Quicksand', 'Helvetica', 'Arial', sans-serif;
   --head-font: 'Space Mono', 'Courier New', Courier, monospace;
+
+  /* for conversions */
+  --px-to-vh: 0.09259259259259259vh;
+  --px-to-vw: 0.052083333333333336vw;
+  --px-to-rem: 0.0625rem;
+
+  /* common font sizes */
+  --font-size-16: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--font-primary);
   font-family: var(--para-font);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  /* expanding body to full page */
+  width: 100vw;
+  height: 100vh;
+
+  /* hiding scrollbar */
+  overflow: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* removing scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:is(h1, h2) {
   font-family: var(--head-font);
+}
+
+h1 {
+  font-size: max(32px, calc(48 * var(--px-to-vw)));
+  font-weight: bold;
+}
+
+h2 {
+  font-size: max(24px, calc(32 * var(--px-to-vw)));
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: max(16px, calc(24 * var(--px-to-vw)));
+  font-weight: 600;
+}
+
+:is(h4, h5, h6, body) {
+  font-size: max(16px, calc(16 * var(--px-to-vw)));
+}
+
+:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
 }

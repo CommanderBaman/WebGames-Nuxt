@@ -2,7 +2,9 @@
   <div class="wrapper">
     <ul>
       <li v-for="route in routes" :key="route.id">
-        <NuxtLink :to="route.path"> {{ route.name }} </NuxtLink>
+        <h3>
+          <NuxtLink :to="route.path"> {{ route.name }} </NuxtLink>
+        </h3>
       </li>
     </ul>
   </div>
@@ -20,3 +22,7 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style scoped>
+@import '~/assets/styles/components/navbar.css';
+</style>
