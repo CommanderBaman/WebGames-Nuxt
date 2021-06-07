@@ -16,16 +16,18 @@
   width: 100%;
   display: grid;
   place-items: center;
-  animation: rotate 1s linear infinite;
+  animation: rotate 1.25s linear infinite;
   text-align: center;
   position: relative;
   --border: 2px solid var(--border-primary);
 }
 
-/* pause on hover */
+/* pause on hover  */
+/* 
 .hex-container:hover {
   animation-play-state: paused;
 }
+*/
 
 .wrapper .display-text {
   position: absolute;

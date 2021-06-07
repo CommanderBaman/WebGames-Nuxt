@@ -7,13 +7,20 @@
     >
       <div
         id="hexagon"
-        :style="{ 'background-color': hover ? backgroundColor : 'transparent' }"
+        :style="{
+          'background-color': hover ? backgroundColor : 'transparent',
+        }"
       ></div>
     </div>
-    <h3 v-if="isLink">
+    <h3
+      v-if="isLink"
+      class="display-text"
+      @mouseenter="hover = true"
+      @mouseleave="hover = false"
+    >
       <NuxtLink :to="linkTo"> {{ text }} </NuxtLink>
     </h3>
-    <p class="display-text" v-else>{{ text }}</p>
+    <p v-else class="display-text">{{ text }}</p>
   </div>
 </template>
 
