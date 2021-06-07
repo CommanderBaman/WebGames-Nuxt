@@ -1,15 +1,17 @@
-.wrapper {
-  position: absolute;
+.nav-wrapper {
+  position: fixed;
   bottom: 0;
   width: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-top: 0.1em solid var(--border-primary);
 }
 
 ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1vh auto;
-  border-top: 0.1em solid var(--border-primary);
+  margin: 0.8vh auto;
 }
 
 li {
@@ -32,17 +34,18 @@ li a:focus::after {
 }
 
 @media only screen and (min-width: 48em) {
-  .wrapper {
-    position: relative;
+  .nav-wrapper {
+    top: 0;
+    bottom: unset;
+    border: none;
   }
 
   ul {
-    border: none;
     margin: 2vh auto;
     padding: 0 3vw;
     justify-content: right;
   }
   li {
-    padding: 1em 1.5em;
+    padding: 0.5em 1.5em;
   }
 }

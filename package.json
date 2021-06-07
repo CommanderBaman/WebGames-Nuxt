@@ -14,7 +14,8 @@
     "pre-commit": "npm run pretty && npm run lint"
   },
   "lint-staged": {
-    "*.{js,vue}": ["prettier --write", "eslint"]
+    "*.{js,vue}": ["prettier --write", "eslint"],
+    "*.{css}": ["prettier --write"]
   },
   "husky": {
     "hooks": {

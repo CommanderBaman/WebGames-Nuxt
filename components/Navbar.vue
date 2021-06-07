@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <nav class="nav-wrapper">
     <ul>
       <li v-for="route in routes" :key="route.id">
         <h3>
@@ -7,7 +7,7 @@
         </h3>
       </li>
     </ul>
-  </div>
+  </nav>
 </template>
 
 <script lang="ts">
