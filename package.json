@@ -10,10 +10,11 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js",
     "pretty": "prettier --config ./.prettierrc --write \"./**/*.{js,vue,scss,css}\" --ignore-path .gitignore",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "pre-commit": "npm run pretty && npm run lint"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint"
+    "*.{js,vue}": ["prettier --write", "eslint"]
   },
   "husky": {
     "hooks": {

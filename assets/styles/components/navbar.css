@@ -9,6 +9,7 @@ ul {
   justify-content: center;
   align-items: center;
   margin: 1vh auto;
+  border-top: 0.1em solid var(--border-primary);
 }
 
 li {
@@ -36,6 +37,7 @@ li a:focus::after {
   }
 
   ul {
+    border: none;
     margin: 2vh auto;
     padding: 0 3vw;
     justify-content: right;
