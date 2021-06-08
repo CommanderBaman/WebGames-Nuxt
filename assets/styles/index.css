@@ -8,6 +8,7 @@
   --bg-primary: #111;
   --font-primary: #fff;
   --border-primary: #fff;
+  --clr-cursor: #eee;
 
   /* fonts */
   --para-font: 'Quicksand', 'Helvetica', 'Arial', sans-serif;
@@ -54,23 +55,23 @@ body::-webkit-scrollbar {
   font-family: var(--head-font);
 }
 
+body {
+  font-size: max(16px, calc(24 * var(--px-to-vw)));
+}
+
 h1 {
-  font-size: max(32px, calc(48 * var(--px-to-vw)));
+  font-size: max(48px, calc(56 * var(--px-to-vw)));
   font-weight: bold;
 }
 
 h2 {
-  font-size: max(24px, calc(32 * var(--px-to-vw)));
+  font-size: max(32px, calc(40 * var(--px-to-vw)));
   font-weight: bolder;
 }
 
 h3 {
-  font-size: max(16px, calc(24 * var(--px-to-vw)));
+  font-size: max(24px, calc(32 * var(--px-to-vw)));
   font-weight: 600;
-}
-
-:is(h4, h5, h6, body) {
-  font-size: max(16px, calc(16 * var(--px-to-vw)));
 }
 
 :focus {
