@@ -1,0 +1,39 @@
+.cursor {
+  display: none;
+
+  position: fixed;
+  height: calc(25 * var(--px-to-vw));
+  width: calc(25 * var(--px-to-vw));
+  min-width: 20px;
+  min-height: 20px;
+
+  background-color: white;
+  border-radius: 50%;
+
+  mix-blend-mode: normal;
+  pointer-events: none;
+  transform-origin: top left;
+  transition: transform 0.2s ease-out;
+}
+
+.enlargedCursor {
+  transform: scale(2.5);
+}
+
+.cursorDifferenceFilter {
+  mix-blend-mode: difference;
+}
+
+/* showing cursor only when not in mobile mode */
+@media (min-width: 40em) {
+  .cursor {
+    display: block;
+  }
+}
+
+/* hiding cursors when in mobile landscape mode */
+@media (min-aspect-ratio: 20/9) {
+  .cursor {
+    display: none;
+  }
+}

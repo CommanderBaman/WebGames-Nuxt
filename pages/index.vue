@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="col">
-      <h1 class="title">WebGames</h1>
+      <h1 class="title" :style="{ '--animation-steps': pageTitle.length }">
+        {{ pageTitle }}
+      </h1>
       <p class="description">
         Your one stop destination to play games on the web
       </p>
@@ -50,9 +52,11 @@ export default Vue.extend({
           delay: index + 1,
         }
       })
+    const pageTitle = 'Webgames'
 
     return {
       hexDetails,
+      pageTitle,
     }
   },
 })

@@ -26,8 +26,10 @@
   width: max-content;
   position: relative;
   letter-spacing: 0;
+  user-select: none;
 
-  --typewriter-speed: 4s;
+  --typewriter-speed: 3.2s;
+  --animation-steps: 8;
 }
 
 .col .title::before,
@@ -42,14 +44,13 @@
 
 .col .title::before {
   background-color: var(--bg-primary);
-  animation: typewriter var(--typewriter-speed) steps(8) 1s infinite alternate;
+  animation: typewriter var(--typewriter-speed) steps(var(--animation-steps)) 1s infinite alternate;
 }
 
 .col .title::after {
   background-color: #fff;
   width: 0.1em;
-  animation: 
-    typewriter var(--typewriter-speed) steps(8) 1s infinite alternate,
+  animation: typewriter var(--typewriter-speed) steps(var(--animation-steps)) 1s infinite alternate,
     cursor-blink 0.25s ease-in-out infinite alternate;
 }
 

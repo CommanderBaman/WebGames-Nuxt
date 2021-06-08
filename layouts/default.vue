@@ -2,6 +2,7 @@
   <div>
     <Nuxt />
     <Navbar />
+    <CustomCursor />
   </div>
 </template>
 

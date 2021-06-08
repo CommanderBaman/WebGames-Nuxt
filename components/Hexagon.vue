@@ -2,9 +2,9 @@
   <div class="wrapper">
     <div
       class="hex-container"
+      :style="{ 'animation-delay': `${-delay}s` }"
       @mouseenter="hover = true"
       @mouseleave="hover = false"
-      :style="{ 'animation-delay': `${-delay}s` }"
     >
       <div
         id="hexagon"

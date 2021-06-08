@@ -1,37 +1,27 @@
 <template>
   <div class="wrapper">
-    <h1>2048</h1>
-    <p>Count: {{ count }}</p>
-    <button @click="increment">Increment</button>
-    <button @click="decrement">Decrement</button>
+    <h1 @mouseover="onMouseOver" @mouseleave="onMouseLeave">2048</h1>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import { mapMutations } from 'vuex'
+
 export default Vue.extend({
-  data() {
-    return {
-      count: 0,
-    }
-  },
   methods: {
-    increment(): void {
-      this.count++
-    },
-    decrement(): void {
-      this.count--
-    },
+    ...mapMutations({
+      onMouseOver: 'cursor/makeCursorNegative',
+      onMouseLeave: 'cursor/makeCursorNormal',
+    }),
   },
 })
 </script>
 
 <style scoped>
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   height: 100vh;
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
-  <Nuxt />
+  <div>
+    <Nuxt />
+    <CustomCursor />
+  </div>
 </template>
-
-<style></style>
