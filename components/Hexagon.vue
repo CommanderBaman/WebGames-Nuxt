@@ -4,12 +4,11 @@
       class="hex-container"
       @mouseenter="hover = true"
       @mouseleave="hover = false"
+      :style="{ 'animation-delay': `${-delay}s` }"
     >
       <div
         id="hexagon"
-        :style="{
-          'background-color': hover ? backgroundColor : 'transparent',
-        }"
+        :style="{ 'background-color': hover ? backgroundColor : 'transparent' }"
       ></div>
     </div>
     <h3
@@ -44,6 +43,10 @@ export default Vue.extend({
     linkTo: {
       type: String,
       default: '/',
+    },
+    delay: {
+      type: Number,
+      default: 0,
     },
   },
   data() {

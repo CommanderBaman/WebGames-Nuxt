@@ -2,15 +2,23 @@
   <div class="container">
     <div class="col">
       <h1 class="title">WebGames</h1>
-      <p>Your one stop destination to play games on the web</p>
+      <p class="description">
+        Your one stop destination to play games on the web
+      </p>
     </div>
-    <div class="col">
-      <div v-for="info in hexDetails" :key="info.id" class="hex-wrapper">
+    <div class="col-grid">
+      <div
+        v-for="(info, index) in hexDetails"
+        :key="info.id"
+        class="hex-wrapper"
+        :style="{ 'grid-area': `hex${index + 1}` }"
+      >
         <Hexagon
           :text="info.name"
           :backgroundColor="info.backgroundColor"
           :isLink="info.isLink"
           :linkTo="info.path"
+          :delay="info.delay"
         />
       </div>
     </div>
@@ -39,6 +47,7 @@ export default Vue.extend({
           ...route,
           backgroundColor: backgroundColors[index % 4],
           isLink: true,
+          delay: index + 1,
         }
       })
 

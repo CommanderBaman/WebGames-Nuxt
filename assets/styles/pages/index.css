@@ -10,11 +10,33 @@
 }
 
 .col {
+  flex: 1;
+  min-height: 25vh;
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column  ;
+  text-align: center;
   justify-content: center;
-  text-align: left;
+}
+
+.col .title {
+  font-size: max(48px, calc(64 * var(--px-to-vw)));
+  padding: 0.2em;
+}
+
+.col .description {
+  padding: 1em;
+}
+
+.col-grid {
+  flex: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "hex1 hex2"
+  "hex3 hex3";
+  place-items: center;
 }
 
 .hex-wrapper {
@@ -25,5 +47,14 @@
 @media only screen and (min-width: 48em) {
   .container {
     flex-direction: row;
+  }
+
+  .col-grid {
+    flex: 1;
+  }
+
+  .hex-wrapper { 
+    width: 30vh;
+    height: 30vh;
   }
 }
