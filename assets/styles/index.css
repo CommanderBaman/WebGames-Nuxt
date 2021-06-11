@@ -48,11 +48,12 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* adding font styles + length */
 :is(h1, h2) {
   font-family: var(--head-font);
 }
 
-body {
+body, button {
   font-size: max(16px, calc(24 * var(--px-to-vw)));
 }
 

@@ -44,13 +44,15 @@
 
 .col .title::before {
   background-color: var(--bg-primary);
-  animation: typewriter var(--typewriter-speed) steps(var(--animation-steps)) 1s infinite alternate;
+  animation: typewriter var(--typewriter-speed) steps(var(--animation-steps)) 1s
+    infinite alternate;
 }
 
 .col .title::after {
   background-color: #fff;
   width: 0.1em;
-  animation: typewriter var(--typewriter-speed) steps(var(--animation-steps)) 1s infinite alternate,
+  animation: typewriter var(--typewriter-speed) steps(var(--animation-steps)) 1s
+      infinite alternate,
     cursor-blink 0.25s ease-in-out infinite alternate;
 }
 
@@ -70,8 +72,8 @@
 }
 
 .hex-wrapper {
-  width: 24vh;
-  height: 24vh;
+  width: min(24vw, 24vh);
+  height: min(24vw, 24vh);
 }
 
 @media only screen and (min-width: 48em) {
@@ -84,8 +86,8 @@
   }
 
   .hex-wrapper {
-    width: 30vh;
-    height: 30vh;
+    width: min(30vw, 30vh);
+    height: min(30vw, 30vh);
   }
 }
 
