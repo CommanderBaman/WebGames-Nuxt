@@ -53,7 +53,8 @@ body::-webkit-scrollbar {
   font-family: var(--head-font);
 }
 
-body, button {
+body,
+button {
   font-size: max(16px, calc(24 * var(--px-to-vw)));
 }
 
